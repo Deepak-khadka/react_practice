@@ -9,6 +9,7 @@ class Profile extends Component {
   }
 
   componentDidMount() {
+
     fetchData.getDate(`users/${ this.props.history.location.id }`)
         .then(res => this.setState({ persons: res.data }))
         .catch(error => console.log(error))
